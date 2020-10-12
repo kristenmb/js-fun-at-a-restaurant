@@ -49,10 +49,13 @@ function removeMenuItem(restaurantName, itemForRemoval, nameOfMenu) {
   } else if(restaurantName.menus.dinner.includes(itemForRemoval) === true || nameOfMenu === 'dinner') {
       restaurantName.menus.dinner.splice(0, 1);
       return `No one is eating our ${itemForRemoval} - it has been removed from the ${nameOfMenu} menu!`;
-  } else if(restaurantName.menus.lunch.includes(itemForRemoval === false) || nameOfMenu === 'lunch'){
+  } else {
       return `Sorry, we don't sell ${itemForRemoval}, try adding a new recipe!`;
   };
 };
+
+//I realized that the tests still pass if I remove my else if statement on line 46 - 48 because the test isn't inputing any lunch values that end up being removed (only the Spaghetti which isn't present). So in regards to refactoring, would i remove that because the test isn't calling it/using it, or would i leave it because it makes the function more dynamic in the long run -- allowing all menus to be checked for items to remove....?
+
 
 
 module.exports = {
