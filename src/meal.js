@@ -24,7 +24,7 @@ function formatPrice(price) {
 };
 
 function decreasePrice(originalPrice) {
-  return originalPrice - (originalPrice / 10);
+  return originalPrice * .9;
 }
 
 function createRecipe(name, ingredients, type) {
