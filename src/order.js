@@ -1,15 +1,15 @@
 function takeOrder(order, deliveryOrders) {
   if(deliveryOrders.length < 3) {
     return deliveryOrders.push(order);
-  } else {
-    return;
+    };
   };
-}
+
 
 function refundOrder(refundRequest, deliveryOrders) {
     deliveryOrders.splice((refundRequest - 1), 1);
     return deliveryOrders;
 };
+
 
 function listItems(deliveryOrders) {
   var itemName = '';
@@ -22,6 +22,7 @@ function listItems(deliveryOrders) {
  };
  return itemName;
 };
+
 
 function searchOrder(deliveryOrders, itemInput) {
   var isPresent = false;
