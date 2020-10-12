@@ -7,12 +7,10 @@ class Chef {
   greetCustomer(name, time) {
     if(time === true) {
       return `Good morning, ${name}!`
-    } else if(time === false) {
-      return `Hello, ${name}!`
-    } else {
+    }
     return `Hello, ${name}!`;
-  };
-};
+    };
+
 
   checkForFood(foodItem) {
     if(this.restaurant.menus.breakfast.includes(foodItem) === true) {
@@ -23,8 +21,8 @@ class Chef {
       return `Yes, we're serving ${foodItem.name} today!`;
     } else {
       return `Sorry, we aren't serving ${foodItem.name} today.`;
-  }
+    }
+  };
 };
-}
 
 module.exports = Chef;
